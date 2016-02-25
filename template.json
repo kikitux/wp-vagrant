@@ -124,14 +124,10 @@
       "type": "shell"
     },
     {
-      "execute_command": "{{.Vars}} bash '{{.Path}}'",
-      "script": "scripts/provision.sh",
-      "type": "shell"
-    },
-    {
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
+        "scripts/provision.sh",
         "scripts/vm_cleanup.sh"
       ]
     }
